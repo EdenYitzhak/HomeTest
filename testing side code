@@ -4,7 +4,7 @@ from DevelopmentSide import SequenceReverser
 class TestSequenceReverser(unittest.TestCase):
     def setUp(self):
         self.sequence_reverser = SequenceReverser()
-        # can be used for all Test Scenarios I mentioned in the pdf files.
+        # can be used for all Test Scenarios I mentioned in the pdf file.
     def test_reverse_sequence_exit(self):
         result = self.sequence_reverser.reverse_sequence("abcdexit")
         # to verify that the actual result of a test is equal to the expected result.
