@@ -1,0 +1,22 @@
+import unittest
+from DevelopmentSide import SequenceReverser
+
+class TestSequenceReverser(unittest.TestCase):
+    def setUp(self):
+        self.sequence_reverser = SequenceReverser()
+        # can be used for all Test Scenarios I mentioned in the pdf files.
+    def test_reverse_sequence_exit(self):
+        result = self.sequence_reverser.reverse_sequence("abcdexit")
+        # to verify that the actual result of a test is equal to the expected result.
+        self.assertEqual(result, "dcba")
+
+    def test_reverse_sequence_xit(self):
+        result = self.sequence_reverser.reverse_sequence("abcdxit", trigger_sequence="xit")
+        self.assertEqual(result, "dcba")
+
+    def test_reverse_sequence_no_trigger(self):
+        result = self.sequence_reverser.reverse_sequence("abcdefg")
+        self.assertEqual(result, "")
+
+if __name__ == "__main__":
+    unittest.main()
