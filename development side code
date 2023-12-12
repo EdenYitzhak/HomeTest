@@ -2,15 +2,15 @@ class SequenceReverser:
     def reverse_sequence(self, input_sequence, trigger_sequence="exit"):
         """
         Parameters:
-        - input_sequence (str): The input sequence of characters.
-        - trigger_sequence (str): The trigger sequence that, when encountered, initiates the reversal.
+        input_sequence (str): The input sequence of characters.
+        trigger_sequence (str): The trigger sequence that, when encountered, initiates the reversal.
 
         Returns:
-        - str: The reversed sequence or an empty string if trigger_sequence is found.
+        str: The reversed sequence or an empty string if trigger_sequence is found.
         """
         reversed_sequence = ""
 
-        # Find the index of the trigger sequence
+        # Finding the index of the trigger sequence using .find() method
         trigger_index = input_sequence.find(trigger_sequence)
 
         # If trigger sequence is found, reverse the sequence before it
